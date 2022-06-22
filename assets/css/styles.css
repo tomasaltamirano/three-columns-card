@@ -33,9 +33,9 @@ body {
   margin: 8.8rem auto;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .main-container {
-    margin: 171px auto 114px auto;
+    margin: 1.7rem auto 114px auto;
     width: 920px;
     flex-direction: row;
   }
@@ -43,14 +43,20 @@ body {
 
 .card__container {
   width: 375px;
-  padding: 2rem 0;
+  padding: 5rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__container {
+    padding: 3.8rem 0;
+  }
 }
 
 .card__container .img {
   display: inline-block;
   position: relative;
   left: 4.5rem;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 
 .card__container .title {
@@ -62,81 +68,103 @@ body {
   font-size: 3.5rem;
   position: relative;
   left: 4.5rem;
+  margin: 2rem 0;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   .card__container .title {
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
 .card__container p {
   color: rgba(255, 255, 255, 0.75);
   font-family: 'Lexend Deca', sans-serif;
-  text-align: justify;
+  text-align: left;
   margin: 2rem 4.5rem;
+  padding: 2rem 0;
+  letter-spacing: .1rem;
+  vertical-align: top;
 }
 
 .card__container .button__card {
   margin: 1rem 4.5rem;
   border: none;
   border-radius: 2rem;
-  padding: 1.3rem 3rem;
+  padding: 1.2rem 3rem;
   font-size: 1.5rem;
   text-align: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .card__container .button__card {
+    margin-top: 5rem;
+  }
+}
+
 .card__container--sedan {
   background: #e38826;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .card__container--sedan .button__card--sedan {
   color: #e38826;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .card__container--sedan .button__card--sedan:hover {
   background: #e38826;
   color: rgba(255, 255, 255, 0.75);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   cursor: pointer;
   transition: .5s;
 }
 
+@media screen and (min-width: 1024px) {
+  .card__container--sedan {
+    border-radius: 1rem 0 0 1rem;
+  }
+}
+
 .card__container--suvs {
   background: #006970;
+  border-radius: 0;
 }
 
 .card__container--suvs .button__card--suvs {
   color: #006970;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .card__container--suvs .button__card--suvs:hover {
   background: #006970;
   color: rgba(255, 255, 255, 0.75);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   cursor: pointer;
   transition: .5s;
 }
 
 .card__container--luxury {
   background: #004241;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .card__container--luxury .button__card--luxury {
   color: #004241;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
 }
 
 .card__container--luxury .button__card--luxury:hover {
   background: #004241;
   color: rgba(255, 255, 255, 0.75);
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   cursor: pointer;
-  transition: .5s;
+  transition: .3s;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__container--luxury {
+    border-radius: 0 1rem 1rem 0;
+  }
 }

@@ -43,9 +43,9 @@ body {
     align-content: center;
     min-height: 100vh;
     margin: 8.8rem auto;
-
-    @media screen and (min-width: 1200px) {
-        margin: 171px auto (129px - 15px) auto;
+    //desktop
+    @media screen and (min-width: 1024px) {
+        margin: 1.7rem auto (129px - 15px) auto;
         width: 920px;
         flex-direction: row;
     }
@@ -53,13 +53,17 @@ body {
 
 .card__container{
     width: 375px;
-    padding: 2rem 0;
+    padding: 5rem 0;
+    //desktop
+    @media screen and (min-width: 1024px) {
+        padding: 3.8rem 0;
+    }
 
     & .img{
         display: inline-block;
         position: relative;
         left: 4.5rem;
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     & .title{
         display:block;
@@ -70,60 +74,70 @@ body {
         font-size: 3.5rem;
         position: relative;
         left: 4.5rem;
-
-        @media screen and (min-width: 1200px) {
-            margin-top: 30px;
+        margin: 2rem 0;
+        //desktop
+        @media screen and (min-width: 1024px) {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
           }
     }
 
     & p{
         color: $transparentWhite;
         font-family: 'Lexend Deca', sans-serif;
-        text-align: justify;
+        text-align: left;
         margin: 2rem 4.5rem;
+        padding: 2rem 0;
+        letter-spacing: .1rem;
+        vertical-align: top;
     }
 
     & .button__card{
         margin: 1rem 4.5rem;
         border: none;
         border-radius: 2rem;
-        padding: 1.3rem 3rem;
+        padding: 1.2rem 3rem;
         font-size: 1.5rem;
         text-align: center;
-
-        
-
-        
+        //desktop
+        @media screen and (min-width: 1024px) {
+            margin-top: 5rem;
+          }
     }   
     
     &--sedan{
         background: $brightOrange;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
+        border-radius: 1rem 1rem 0 0;
+        
         & .button__card--sedan{
             color: $brightOrange;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
         }
 
         & .button__card--sedan:hover {
             background: $brightOrange;
             color: $transparentWhite;
-            border: 1px solid #fff;
+            border: 2px solid #fff;
             cursor: pointer;
             transition: .5s;
         }
+        //desktop
+        @media screen and (min-width: 1024px) {
+            border-radius: 1rem 0 0 1rem;
+          }
     }
 
     &--suvs{
         background: $darkCyan;
+        border-radius: 0;
         & .button__card--suvs{
             color: $darkCyan;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
         }
         & .button__card--suvs:hover{
             background: $darkCyan;
             color: $transparentWhite;
-            border: 1px solid #fff;
+            border: 2px solid #fff;
             cursor: pointer;
             transition: .5s;
         }
@@ -131,19 +145,22 @@ body {
 
     &--luxury{
         background: $veryDarkCyan;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        border-radius: 0 0 1rem 1rem;
         & .button__card--luxury{
             color: $veryDarkCyan;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
         }
         & .button__card--luxury:hover{
             background: $veryDarkCyan;
             color: $transparentWhite;
-            border: 1px solid #fff;
+            border: 2px solid #fff;
             cursor: pointer;
-            transition: .5s;
+            transition: .3s;
         }
+        //desktop
+        @media screen and (min-width: 1024px) {
+            border-radius: 0 1rem 1rem 0;
+          }
     }
 }
 
