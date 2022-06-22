@@ -1,0 +1,149 @@
+/*Google fonts*/
+
+/*Lexend deca*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/*Big Shoulders Display*/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*Colores primarios - cards y botones en hover*/
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+/*Colores neutrales*/
+
+/*parrafos*/
+$transparentWhite: hsla(0, 0%, 100%, 0.75); 
+
+/*background, headings y botones*/
+$veryLightGray: hsl(0, 0%, 95%);
+
+body {
+    font-size: 1.5rem;
+    background: $veryLightGray;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+    margin: 8.8rem auto;
+
+    @media screen and (min-width: 1200px) {
+        margin: 171px auto (129px - 15px) auto;
+        width: 920px;
+        flex-direction: row;
+    }
+}
+
+.card__container{
+    width: 375px;
+    padding: 2rem 0;
+
+    & .img{
+        display: inline-block;
+        position: relative;
+        left: 4.5rem;
+        padding: 3rem 0;
+    }
+    & .title{
+        display:block;
+        color: $veryLightGray;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-family: 'Big Shoulders Display', sans-serif;
+        font-size: 3.5rem;
+        position: relative;
+        left: 4.5rem;
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 30px;
+          }
+    }
+
+    & p{
+        color: $transparentWhite;
+        font-family: 'Lexend Deca', sans-serif;
+        text-align: justify;
+        margin: 2rem 4.5rem;
+    }
+
+    & .button__card{
+        margin: 1rem 4.5rem;
+        border: none;
+        border-radius: 2rem;
+        padding: 1.3rem 3rem;
+        font-size: 1.5rem;
+        text-align: center;
+
+        
+
+        
+    }   
+    
+    &--sedan{
+        background: $brightOrange;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        & .button__card--sedan{
+            color: $brightOrange;
+            border: 1px solid transparent;
+        }
+
+        & .button__card--sedan:hover {
+            background: $brightOrange;
+            color: $transparentWhite;
+            border: 1px solid #fff;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+
+    &--suvs{
+        background: $darkCyan;
+        & .button__card--suvs{
+            color: $darkCyan;
+            border: 1px solid transparent;
+        }
+        & .button__card--suvs:hover{
+            background: $darkCyan;
+            color: $transparentWhite;
+            border: 1px solid #fff;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+
+    &--luxury{
+        background: $veryDarkCyan;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        & .button__card--luxury{
+            color: $veryDarkCyan;
+            border: 1px solid transparent;
+        }
+        & .button__card--luxury:hover{
+            background: $veryDarkCyan;
+            color: $transparentWhite;
+            border: 1px solid #fff;
+            cursor: pointer;
+            transition: .5s;
+        }
+    }
+}
+
